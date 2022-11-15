@@ -11,7 +11,7 @@ export const Quate = () => {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '2de3ea0480mshb16fe76c7c5843cp16e8a1jsnb40fed717df3',
+        'X-RapidAPI-Key': `${process.env.REACT_APP_API_KEY}`,
         'X-RapidAPI-Host': 'quotes15.p.rapidapi.com',
       },
     };
@@ -31,21 +31,28 @@ export const Quate = () => {
     <div
       className={
         dark
-          ? 'w-full text-center h-full bg-gradient-to-b from-blue-700 to-gray-800 text-white  pt-20'
-          : 'w-full text-center h-full bg-white text-black  pt-20'
+          ? 'w-full text-center h-full bg-gradient-to-b from-gray-700 to-blue-900 text-white  pt-20'
+          : 'w-full text-center h-full bg-gradient-to-b from-yellow-300 to-red-200 text-black  pt-20'
       }
     >
-      <h1>Random Quates</h1>
+      <h2 className='underline'>Random Quates</h2>
       <ul className='mt-5 md:mt-10'>
         {quates.map((quate) => {
           return (
-            <li className='text-lg' key={quate.id}>
-              {quate.content}
+            <li className='text-lg text-center lg:mx-20' key={quate.id}>
+              {quate?.content}
             </li>
           );
         })}
       </ul>
-      <button onClick={loadQuate} className='border-black text-lg my-2'>
+      <button
+        onClick={loadQuate}
+        className={
+          dark
+            ? 'border-white bg-gradient-to-r from-purple-800 to-blue-700 text-lg text-white my-2 p-2 lg:p-3 hover:scale-105  hover:bg-black hover:text-white'
+            : 'border-black bg-gradient-to-r from-red-400 to-yellow-400 text-lg text-black my-2 p-2 lg:p-3 hover:scale-105 hover:bg-white hover:text-black'
+        }
+      >
         Give another one
       </button>
     </div>

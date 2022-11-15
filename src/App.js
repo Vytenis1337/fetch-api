@@ -17,6 +17,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ dark, toggleTheme }}>
       <Theme />
+
       <Bored />
       <Quate />
       <GetIp />

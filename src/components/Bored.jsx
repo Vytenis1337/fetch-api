@@ -29,11 +29,11 @@ export const Bored = () => {
     <div
       className={
         dark
-          ? 'w-full text-center h-full bg-gradient-to-b from-purple-900 to-blue-700 text-white  pt-20'
-          : 'w-full text-center h-full bg-white text-black  pt-20'
+          ? 'w-full text-center h-full bg-gradient-to-b from-black to-gray-700 text-white  pt-20'
+          : 'w-full text-center h-full bg-gradient-to-b from-green-300 to-yellow-300 text-black  pt-20'
       }
     >
-      <h1>What Should I do</h1>
+      <h2 className='underline'>What Should I do</h2>
       <ul className='mt-5 md:mt-10'>
         {activities.map((activity) => {
           return (
@@ -46,7 +46,11 @@ export const Bored = () => {
       <button
         disabled={isLoading}
         onClick={loadActivity}
-        className='border-black text-lg my-2 '
+        className={
+          dark
+            ? 'border-white bg-gradient-to-r from-purple-800 to-blue-700 text-lg text-white my-2 p-2 lg:p-3 hover:scale-105 hover:bg-black hover:text-white'
+            : 'border-black bg-gradient-to-r from-red-400 to-yellow-400 text-lg text-black my-2 p-2 lg:p-3 hover:scale-105 hover:border-black  '
+        }
       >
         Give another one
       </button>

@@ -23,13 +23,20 @@ export const Picture = () => {
     <div
       className={
         dark
-          ? 'w-full text-center h-full bg-gradient-to-b from-purple-700 to-black text-white  pt-20 flex flex-col items-center justify-center'
-          : 'w-full text-center h-full bg-white text-black  pt-20 flex flex-col items-center justify-center'
+          ? 'w-full text-center h-full bg-gradient-to-b from-purple-900 to-purple-700 text-white  pt-20 flex flex-col items-center justify-center'
+          : 'w-full text-center h-full bg-gradient-to-b from-orange-200 to-blue-200 text-black  pt-20 flex flex-col items-center justify-center'
       }
     >
-      <h1 className='py-5'>Dogs</h1>
-      <img className='w-1/5 ' src={data.message} alt='dog' />
-      <button onClick={handleChange} className='text-lg my-5'>
+      <h2 className='py-5 underline'>Dogs</h2>
+      <img className='w-96 h-96' src={data?.message} alt='dog' />
+      <button
+        onClick={handleChange}
+        className={
+          dark
+            ? 'border-white bg-gradient-to-r from-purple-800 to-blue-700 text-lg text-white my-2 p-2 lg:p-3 hover:scale-105 hover:bg-black hover:text-white'
+            : 'border-black bg-gradient-to-r from-red-400 to-yellow-400 text-lg text-black my-2 p-2 lg:p-3  hover:scale-105 hover:bg-white hover:text-black'
+        }
+      >
         What could it be
       </button>
     </div>
