@@ -1,4 +1,4 @@
-import { Bored } from './components/Bored';
+import { Activity } from './components/Activity';
 import { GetIp } from './components/GetIp';
 import { Quate } from './components/Quate';
 import { Picture } from './components/Picture';
@@ -18,7 +18,7 @@ function App() {
     <ThemeContext.Provider value={{ dark, toggleTheme }}>
       <Theme />
 
-      <Bored />
+      <Activity />
       <Quate />
       <GetIp />
       <Picture />

@@ -16,7 +16,18 @@ export const Picture = () => {
   };
 
   if (error) {
-    return <h1> There was an error!</h1>;
+    return (
+      <h1
+        className={
+          dark
+            ? 'w-full text-center h-full bg-gradient-to-b from-purple-900 to-purple-700 text-white  pt-20 flex flex-col items-center justify-center text-2xl'
+            : 'w-full text-center h-full bg-gradient-to-b from-blue-200 to-blue-300 text-black  pt-20 flex flex-col items-center justify-center text-2xl'
+        }
+      >
+        {' '}
+        There was an error!
+      </h1>
+    );
   }
 
   return (
@@ -24,20 +35,20 @@ export const Picture = () => {
       className={
         dark
           ? 'w-full text-center h-full bg-gradient-to-b from-purple-900 to-purple-700 text-white  pt-20 flex flex-col items-center justify-center'
-          : 'w-full text-center h-full bg-gradient-to-b from-orange-200 to-blue-200 text-black  pt-20 flex flex-col items-center justify-center'
+          : 'w-full text-center h-full bg-gradient-to-b from-blue-200 to-blue-300 text-black  pt-20 flex flex-col items-center justify-center'
       }
     >
-      <h2 className='py-5 underline'>Dogs</h2>
+      <h2 className='py-5 underline'>Dog Pictures</h2>
       <img className='w-96 h-96' src={data?.message} alt='dog' />
       <button
         onClick={handleChange}
         className={
           dark
-            ? 'border-white bg-gradient-to-r from-purple-800 to-blue-700 text-lg text-white my-2 p-2 lg:p-3 hover:scale-105 hover:bg-black hover:text-white'
-            : 'border-black bg-gradient-to-r from-red-400 to-yellow-400 text-lg text-black my-2 p-2 lg:p-3  hover:scale-105 hover:bg-white hover:text-black'
+            ? 'rounded-l border-white bg-gradient-to-r from-purple-800 to-blue-700 text-lg text-white my-2 p-2 lg:p-3 hover:scale-105 hover:bg-black hover:text-white'
+            : 'rounded-xl border-black bg-gradient-to-r from-red-400 to-yellow-400 text-lg text-black my-2 p-2 lg:p-3  hover:scale-105 hover:bg-white hover:text-black'
         }
       >
-        What could it be
+        Show Another Dog
       </button>
     </div>
   );

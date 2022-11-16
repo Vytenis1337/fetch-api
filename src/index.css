@@ -36,6 +36,6 @@ html {
   }
 
   button {
-    @apply rounded-xl uppercase bg-[#fcd21d] text-white border-white border-4;
+    @apply uppercase bg-[#fcd21d] text-white border-white border-4;
   }
 }
