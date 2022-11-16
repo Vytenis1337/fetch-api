@@ -22,7 +22,7 @@ export const GetIp = () => {
       <p
         className={
           dark
-            ? 'w-full text-center h-full bg-gradient-to-b from-blue-900 to-purple-900 text-white  pt-20 text-2xl'
+            ? 'w-full text-center h-full bg-gradient-to-b from-gray-800 to-gray-700 text-white  pt-20 text-2xl'
             : 'w-full text-center h-full bg-gradient-to-b from-blue-100 to-blue-200 text-black  pt-20 text-2xl'
         }
       >
@@ -34,7 +34,7 @@ export const GetIp = () => {
     <div
       className={
         dark
-          ? 'w-full text-center h-full bg-gradient-to-b from-blue-900 to-purple-900 text-white  pt-20'
+          ? 'w-full text-center h-full bg-gradient-to-b from-gray-800 to-gray-700 text-white  pt-20'
           : 'w-full text-center h-full bg-gradient-to-b from-blue-100 to-blue-200 text-black  pt-20'
       }
     >

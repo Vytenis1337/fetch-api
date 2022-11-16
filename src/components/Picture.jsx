@@ -20,7 +20,7 @@ export const Picture = () => {
       <h1
         className={
           dark
-            ? 'w-full text-center h-full bg-gradient-to-b from-purple-900 to-purple-700 text-white  pt-20 flex flex-col items-center justify-center text-2xl'
+            ? 'w-full text-center h-full bg-gradient-to-b from-gray-700 to-gray-600 text-white  pt-20 flex flex-col items-center justify-center text-2xl'
             : 'w-full text-center h-full bg-gradient-to-b from-blue-200 to-blue-300 text-black  pt-20 flex flex-col items-center justify-center text-2xl'
         }
       >
@@ -34,7 +34,7 @@ export const Picture = () => {
     <div
       className={
         dark
-          ? 'w-full text-center h-full bg-gradient-to-b from-purple-900 to-purple-700 text-white  pt-20 flex flex-col items-center justify-center'
+          ? 'w-full text-center h-full bg-gradient-to-b from-gray-700 to-gray-600 text-white  pt-20 flex flex-col items-center justify-center'
           : 'w-full text-center h-full bg-gradient-to-b from-blue-200 to-blue-300 text-black  pt-20 flex flex-col items-center justify-center'
       }
     >
