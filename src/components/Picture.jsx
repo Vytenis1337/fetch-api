@@ -1,6 +1,5 @@
 import React from 'react';
 import useSWR, { mutate } from 'swr';
-
 import { useContext } from 'react';
 import { ThemeContext } from '../App';
 
@@ -15,21 +14,6 @@ export const Picture = () => {
     mutate('https://dog.ceo/api/breeds/image/random');
   };
 
-  if (error) {
-    return (
-      <h1
-        className={
-          dark
-            ? 'w-full text-center h-full bg-gradient-to-b from-gray-700 to-gray-600 text-white  pt-20 flex flex-col items-center justify-center text-2xl'
-            : 'w-full text-center h-full bg-gradient-to-b from-blue-200 to-blue-300 text-black  pt-20 flex flex-col items-center justify-center text-2xl'
-        }
-      >
-        {' '}
-        There was an error!
-      </h1>
-    );
-  }
-
   return (
     <div
       className={
@@ -39,6 +23,8 @@ export const Picture = () => {
       }
     >
       <h2 className='py-5 underline'>Dog Pictures</h2>
+
+      {error && <p className='mt-5 md:mt-10 text-2xl'>There was an error!</p>}
       <img className='w-96 h-96' src={data?.message} alt='dog' />
       <button
         onClick={handleChange}
